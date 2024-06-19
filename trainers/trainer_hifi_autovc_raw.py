@@ -28,7 +28,7 @@ from utils.functions_plot import plot_spectrogram, plot_mel_spectrogram
 from utils.functions_eval import calculate_evaluation_metric
 
 
-class TrainerHiFiAutoVC(object):
+class TrainerHiFiAutoVCRaw(object):
     def __init__(self, data_dict, model_dict, opt_dict, loss_function, cfg):
         """ Set parameters """
 
@@ -248,11 +248,6 @@ class TrainerHiFiAutoVC(object):
                         utt_b = feat_dict['spk_raw']
                         gen_x, feat_dict = self.coder(real_x, [1, 1], self.centroid_dict,
                                                     utt_b=utt_b)  # (B, 1, T)
-                    elif self.target.endswith('autovc_spk_enc_mean'):
-                        pass #TODO
-                        #utt_c = feat_dict['spk_enc_mean']
-                        #gen_x, feat_dict = self.coder(real_x, self.q_modes[qidx], 
-                        #                            utt_c=utt_c)  # (B, 1, T)
                 else:
                     gen_x, feat_dict = self.coder(real_x, [1, 1], self.centroid_dict)  # (B, 1, T)
 

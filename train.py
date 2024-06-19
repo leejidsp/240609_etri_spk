@@ -33,12 +33,12 @@ print("#Available GPU: \t\t", torch.cuda.device_count())
 parser = argparse.ArgumentParser(description="")
 parser.add_argument('--config_name',
                         #default='example',
-                        default='example_diffusion',
+                        #default='example_diffusion',
                         #default='00_m01_autovc_850bps_L350_S500',  #gs-0
                         #default='01_m02_same_vq_850bps_L350_S500', #st9-0
                         #default='02_m03_multiple_vq_850bps_L350_S500', #st9-1
                         #default='03_m04_content_vq_850bps_L350_S500',  #s17-0
-                        #default='04_m05_diff_850bps_L350_S500',  #
+                        default='04_m05_autovc_mean_850bps_L350_S500',  #s17-0
 
                             type=str, help="(str) Experiment name")
 

@@ -1,9 +1,11 @@
 from .trainer_hifi_basic import TrainerHiFiBasic
-from .trainer_hifi_autovc import TrainerHiFiAutoVC
+from .trainer_hifi_autovc_raw import TrainerHiFiAutoVCRaw
+from .trainer_hifi_autovc_mean import TrainerHiFiAutoVCMean
 
 all_trainers_dict = {
         'TrainerHiFiBasic': TrainerHiFiBasic,
-        'TrainerHiFiAutoVC': TrainerHiFiAutoVC,
+        'TrainerHiFiAutoVCRaw': TrainerHiFiAutoVCRaw,
+        'TrainerHiFiAutoVCMean': TrainerHiFiAutoVCMean,
         }
 
 #TODO: modify if needed
