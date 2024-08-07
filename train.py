@@ -38,7 +38,9 @@ parser.add_argument('--config_name',
                         #default='01_m02_same_vq_850bps_L350_S500', #st9-0
                         #default='02_m03_multiple_vq_850bps_L350_S500', #st9-1
                         #default='03_m04_content_vq_850bps_L350_S500',  #s17-0
-                        default='04_m05_autovc_mean_850bps_L350_S500',  #s17-0
+                        #default='04_m05_autovc_mean_850bps_L350_S500',  #s17-0
+                        default='05_m01_autovc_600bps_L350_S250',  #local-1
+                        #default='06_m02_same_vq_600bps_L350_S250', #s3-1
 
                             type=str, help="(str) Experiment name")
 
